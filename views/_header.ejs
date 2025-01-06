@@ -1,0 +1,15 @@
+<header>
+    <div class="logo">Codeial</div>
+    <nav>
+        <ul>
+            <% if (user) { %>
+                <li>Welcome, <%= user.name %></li>
+                <li><a href="/users/profile/<%= user.id %>">Profile</a></li>
+                <li><a href="/users/sign-out">Sign Out</a></li>
+            <% } else { %>
+                <li><a href="/users/sign-in">Sign In</a></li>
+                <li><a href="/users/sign-up">Sign Up</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

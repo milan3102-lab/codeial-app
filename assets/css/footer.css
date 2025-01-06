@@ -1,0 +1,25 @@
+/* assets/scss/footer.scss */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #002349;
+  /* Dark royal blue */
+  color: #ffffff;
+  /* White text */ }
+
+footer ul {
+  list-style: none;
+  padding: 0; }
+
+footer ul li {
+  display: inline;
+  margin: 0 15px; }
+
+footer ul li a {
+  color: #957C3D;
+  /* Gold for links */
+  text-decoration: none; }
+
+footer ul li a:hover {
+  color: #ffffff;
+  /* White on hover */ }

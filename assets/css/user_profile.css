@@ -1,0 +1,31 @@
+/* assets/scss/user_profile.scss */
+form {
+  background: #002349;
+  /* Dark royal blue */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #957C3D;
+  /* Gold border */
+  border-radius: 5px;
+  margin-bottom: 10px; }
+
+form input[type="submit"] {
+  background-color: #957C3D;
+  /* Gold */
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease; }
+
+form input[type="submit"]:hover {
+  background-color: #805d3a;
+  /* Darker gold on hover */ }

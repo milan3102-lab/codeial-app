@@ -1,0 +1,66 @@
+/* assets/scss/home.scss */
+
+#home-content {
+    max-width: 1200px; /* Increased max-width for better layout */
+    margin: auto;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between posts and friends section */
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%; /* Full width for the content wrapper */
+}
+
+#feed-posts {
+    flex: 3; /* Takes 3 parts of the flex space */
+    background: linear-gradient(to bottom, #002349 0%, #001d33 100%); /* Gradient background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20px; /* Space between posts and friends section */
+}
+
+aside#user-friends {
+    flex: 1; /* Takes 1 part of the flex space */
+    background-color: #002349; /* Dark royal blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff; /* White text */
+}
+
+#new-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #957C3D; /* Gold border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#new-post-form input[type="submit"] {
+    background-color: #957C3D; /* Gold submit button */
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#new-post-form input[type="submit"]:hover {
+    background-color: #805d3a; /* Darker gold on hover */
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comments-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    border-left: 4px solid #957C3D; /* Gold border */
+    border-radius: 5px;
+}

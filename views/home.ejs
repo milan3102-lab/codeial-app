@@ -1,0 +1,44 @@
+<!-- views/home.ejs -->
+<h1>
+    Codeial / <%= title %>
+</h1>
+
+<script src="https://kit.fontawesome.com/fc7ff5e841.js" crossorigin="anonymous"></script>
+
+<div id="home-content">
+    <div class="content-wrapper">
+        <section id="feed-posts">
+            <h4>Posts</h4>
+            <form action="/posts/create" id="new-post-form" method="POST">
+                <textarea name="content" cols="30" rows="3" placeholder="Type Here..." required></textarea>
+                <input type="submit" value="Post">
+            </form>
+
+            <div id="posts-list-container">
+                <ul>
+                    <% for (let post of posts) { %>
+                        <li>
+                            <%- include('_post', { post: post, user: user }) %>
+                            <ul class="comments-list">
+                                <% for (let comment of post.comments) { %>
+                                    <%- include('_comment', { comment: comment, post: post, user: user }) %>
+                                <% } %>
+                            </ul>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </section>
+
+        <aside id="user-friends">
+            <h4>Friends</h4>
+            <% for(let u of all_users) { %>
+                <p>
+                    <a href="/users/profile/<%= u._id %>"><%= u.name %></a>
+                </p>
+            <% } %>    
+        </aside>
+    </div>
+</div>
+
+<script src="/js/home_posts.js"></script>

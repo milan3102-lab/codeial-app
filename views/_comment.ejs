@@ -1,0 +1,12 @@
+<li class="comment-content">
+    <%= comment.content %> - <%= comment.user.name %>
+    <% if (user) { %>
+        <% if (comment.user._id.toString() === user._id.toString() || post.user._id.toString() === user._id.toString()) { %>
+            <small class="delete-icon">
+                <a href="/comments/destroy/<%= comment._id %>">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+            </small>
+        <% } %>
+    <% } %>
+</li>

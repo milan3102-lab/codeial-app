@@ -1,0 +1,9 @@
+<footer>
+    <p>&copy; 2024 Codeial</p>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <% if (user) { %>
+            <li><a href="/users/profile/<%= user.id %>">Profile</a></li>
+        <% } %>
+    </ul>
+</footer>
